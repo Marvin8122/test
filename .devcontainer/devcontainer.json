@@ -1,0 +1,23 @@
+{
+    "hostRequirements": {"cpus": 4},
+        
+    "onCreateCommand": "npm install && npm run build",
+    "postCreateCommand": "",
+    
+    "customizations": {
+      "codespaces": {
+        "openFiles": ["src/App.js"]
+      }
+    },
+          
+    "postAttachCommand": {
+      "server": "npm start",
+    },
+
+    "portsAttributes": {
+      "3000": {
+        "label": "Application",
+        "onAutoForward": "openPreview"
+      }
+    }
+  }
